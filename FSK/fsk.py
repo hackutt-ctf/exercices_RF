@@ -180,7 +180,7 @@ class fsk(gr.top_block, Qt.QWidget):
         self.blocks_repeat_0 = blocks.repeat(gr.sizeof_char*1, symbol_len)
         self.blocks_multiply_xx_0_0 = blocks.multiply_vff(1)
         self.blocks_multiply_xx_0 = blocks.multiply_vff(1)
-        self.blocks_file_source_0 = blocks.file_source(gr.sizeof_char*1, '/tmp/flag.txt', False, 0, 0)
+        self.blocks_file_source_0 = blocks.file_source(gr.sizeof_char*1, '/tmp/flag.txt', True, 0, 0)
         self.blocks_file_source_0.set_begin_tag(pmt.PMT_NIL)
         self.blocks_file_sink_0 = blocks.file_sink(gr.sizeof_float*1, '/home/paul/Downloads/exercices_RF/FSK/out.raw', False)
         self.blocks_file_sink_0.set_unbuffered(False)
